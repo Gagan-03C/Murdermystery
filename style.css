@@ -1,12 +1,40 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    color: white;
+    font-family: monospace;
+    background-color: #0d0d0d;
+    color: #00ffcc;
+}
 
-    background-image: url("./BG1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 240px;
+    background: #111;
+    padding: 20px;
+    border-right: 2px solid #00ffcc;
+}
+
+.sidebar button {
+    display: block;
+    background: black;
+    color: #00ffcc;
+    border: 1px solid #00ffcc;
+    margin: 8px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background: #00ffcc;
+    color: black;
+}
+
+.main-content {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
 }
