@@ -1,3 +1,3 @@
 ﻿# Murdermystery
-# Author Gagan
+# Author Gagan (Murdermystery)
 
