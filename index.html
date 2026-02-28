@@ -1,37 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>The 48-Hour Hackathon Mystery</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code-Red Investigation | Landing</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="landing-body">
+  <main class="landing">
+    <section class="hero-panel">
+      <p class="eyebrow">College Event: Interactive Investigation Platform</p>
+      <h1>The 48-Hour Hackathon Mystery</h1>
+      <p>
+        A finalist collapsed in Server Room B.02 at 3:15 AM. Your team has one session to reconstruct
+        the sequence, verify eight clues, and unlock the final vault.
+      </p>
+      <div class="landing-actions">
+        <a class="btn-primary" href="dashboard.html">Enter Investigation</a>
+        <button class="btn-secondary" id="rulesBtn" type="button">View Rules</button>
+      </div>
+    </section>
 
-<div class="dashboard">
+    <section class="event-panel">
+      <h2>Event Mode</h2>
+      <ul>
+        <li>Linear clue progression with validation in terminal.</li>
+        <li>90-minute countdown starts when dashboard opens.</li>
+        <li>3 failed vault attempts lock access.</li>
+      </ul>
+    </section>
+  </main>
 
-    <div class="sidebar">
-        <h2>FORENSIC DASHBOARD</h2>
+  <dialog id="rulesDialog">
+    <h3>Investigation Rules</h3>
+    <ol>
+      <li>Use sidebar and terminal together to solve clues in order.</li>
+      <li>Use <code>HELP</code> in terminal to inspect available commands.</li>
+      <li>Wrong vault attempts are limited to 3.</li>
+      <li>Organizer reset command: <code>ADMIN_OVERRIDE</code>.</li>
+    </ol>
+    <button id="closeRules" type="button">Close</button>
+  </dialog>
 
-        <button onclick="loadSection('news')">Campus News</button>
-        <button onclick="loadSection('notes')">Detective Notes</button>
-        <button onclick="loadSection('autopsy')">Autopsy Report</button>
-        <button onclick="loadSection('logs')">Access Logs</button>
-        <button onclick="loadSection('transcripts')">Interrogations</button>
-        <button onclick="loadVault()">Secure Vault</button>
-    </div>
-
-    <div class="main-content" id="contentArea">
-        <h1>WELCOME DETECTIVE</h1>
-        <p>Type HELP in terminal to begin investigation.</p>
-    </div>
-
-</div>
-
-<div class="terminal">
-    <span>> </span>
-    <input type="text" id="terminalInput" placeholder="Enter command..." onkeydown="handleCommand(event)">
-</div>
-
-<script src="script.js"></script>
-
+  <script>
+    const rulesDialog = document.getElementById('rulesDialog');
+    document.getElementById('rulesBtn').addEventListener('click', () => rulesDialog.showModal());
+    document.getElementById('closeRules').addEventListener('click', () => rulesDialog.close());
+  </script>
 </body>
 </html>

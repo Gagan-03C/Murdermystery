@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code-Red Investigation | Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>FORENSIC DASHBOARD</h1>
+    <div class="status-row">
+      <span id="timer">90:00</span>
+      <span id="progress">Clues Solved: 0/8</span>
+    </div>
+  </header>
+
+  <main class="dashboard-layout">
+    <aside class="sidebar">
+      <h2>Evidence</h2>
+      <button data-evidence="newspaper">Campus Newspaper</button>
+      <button data-evidence="notes">Detective Notes</button>
+      <button data-evidence="autopsy">Autopsy Report</button>
+      <button data-evidence="logs">Access Logs</button>
+      <button data-evidence="transcriptA">Interrogation: Maya</button>
+      <button data-evidence="matrix">Participant Matrix</button>
+      <button data-evidence="timeline">Timeline Board</button>
+      <button id="vaultBtn" disabled>Final Vault</button>
+    </aside>
+
+    <section class="viewer" id="contentArea">
+      <h2>Welcome, Detective</h2>
+      <p>Investigate the evidence and use the terminal to solve clues in sequence.</p>
+      <p>Type <code>HELP</code> below to begin.</p>
+    </section>
+  </main>
+
+  <section class="terminal-panel">
+    <div id="terminalOutput" class="terminal-output"></div>
+    <label for="terminalInput" class="sr-only">Terminal input</label>
+    <div class="terminal-input-row">
+      <span>&gt;</span>
+      <input id="terminalInput" type="text" placeholder="Enter command..." autocomplete="off">
+    </div>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="clues.js"></script>
+  <script src="vault.js"></script>
+  <script src="terminal.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
