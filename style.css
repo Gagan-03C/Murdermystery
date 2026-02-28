@@ -1,13 +1,11 @@
 body {
     margin: 0;
+    padding: 0;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: Arial, sans-serif;
     color: white;
 
-    background: url("BG1.png");
+    background-image: url("./BG1.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
