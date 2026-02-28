@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The 48-Hour Hackathon Mystery</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,25 +9,29 @@
 <div class="dashboard">
 
     <div class="sidebar">
-        <h2>MYSTERY DASHBOARD</h2>
+        <h2>FORENSIC DASHBOARD</h2>
+
         <button onclick="loadSection('news')">Campus News</button>
         <button onclick="loadSection('notes')">Detective Notes</button>
-        <button onclick="loadSection('autopsy')">Autopsy</button>
-        <button onclick="loadSection('transcripts')">Interviews</button>
+        <button onclick="loadSection('autopsy')">Autopsy Report</button>
         <button onclick="loadSection('logs')">Access Logs</button>
-        <button onclick="loadVault()">Reveal Vault</button>
+        <button onclick="loadSection('transcripts')">Interrogations</button>
+        <button onclick="loadVault()">Secure Vault</button>
     </div>
 
     <div class="main-content" id="contentArea">
-        <h1>Welcome, Investigator</h1>
-        <p>Select an evidence category to begin.</p>
+        <h1>WELCOME DETECTIVE</h1>
+        <p>Type HELP in terminal to begin investigation.</p>
     </div>
 
 </div>
 
-<script src="js/data.js"></script>
-<script src="js/dashboard.js"></script>
-<script src="js/vault.js"></script>
+<div class="terminal">
+    <span>> </span>
+    <input type="text" id="terminalInput" placeholder="Enter command..." onkeydown="handleCommand(event)">
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
