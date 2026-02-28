@@ -1,11 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Murder Mystery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 48-Hour Hackathon Mystery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    ...
+
+<div class="dashboard">
+
+    <div class="sidebar">
+        <h2>MYSTERY DASHBOARD</h2>
+        <button onclick="loadSection('news')">Campus News</button>
+        <button onclick="loadSection('notes')">Detective Notes</button>
+        <button onclick="loadSection('autopsy')">Autopsy</button>
+        <button onclick="loadSection('transcripts')">Interviews</button>
+        <button onclick="loadSection('logs')">Access Logs</button>
+        <button onclick="loadVault()">Reveal Vault</button>
+    </div>
+
+    <div class="main-content" id="contentArea">
+        <h1>Welcome, Investigator</h1>
+        <p>Select an evidence category to begin.</p>
+    </div>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/vault.js"></script>
+
 </body>
 </html>
